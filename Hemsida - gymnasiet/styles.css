@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .innehall {
+        width: 50%;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 900px) {
+        .innehall {
+            width: 90%;
+        }
+    }
+
+    /* --------------------NAVBAREN-------------------- */
+
+    .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    width: 90%;
+    margin-left: 5%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    list-style-type: none;
+    }
+  
+    .topnav a {
+    float: left;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;;
+    text-align: center;;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .topnav a.active {
+    background-color: darkgrey;
+    color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+    }
+
+      
+    @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+}
+
+    .topnav .icon {
+    display: none;
+    } 
+
+    /* --------------------INDEX INNEHÃ…LL-------------------- */
+
+    .container-fluid {
+    text-align: center;
+    width: 90%;
+    background-color: darkgrey;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    }
+
+    img[alt=forsta] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 350px;
+    margin-left: 5%;
+    border: 2px solid black;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    }
+
+    h1 {
+    color: black;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    }
+
+    h2 {
+    color: black;
+    font-size: 17px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    }
+
+    .container-img {
+        text-align: center;
+    }
+
+    /* --------------------PRODUKTERNA PÃ… INDEX-------------------- */
+
+    .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    justify-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    grid-template-areas: "auto auto auto auto";
+    font-size: 18px;
+    }
+
+    .product-container div{
+    position: relative;
+    }
+
+    .product-container div img{
+    height: 250px;
+    width: 250px;
+    transition: 1s;
+    border: 2px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    }
+
+    .product-container div img:hover, .product-container div img button:hover + img{
+    filter: brightness(50%);
+    }
+
+    input[type=number] {
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20%;
+    height: 10%;
+    padding: 10px;
+    background: white;
+    font-size: 15px;
+    margin-left: 5%;
+    margin-top: 10px;
+    }
+
+    .product-container div img:hover + button, .product-container div button:hover{
+    transition: 1s;
+    opacity: 1;
+    cursor: pointer;
+    }
+
+    .product-container div button{
+    background: darkgrey;
+   
+    padding: 10px;
+    color: white;
+    border: none;
+    transition: 1s;
+    opacity: 0;
+    bottom: 16%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    }
+
+    /* --------------------VARUKORGEN & KNAPPARNA-------------------- */
+
+    .items-in-basket{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 10px;
+    width: 14px;
+    font-weight: bolder;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    }
+
+    #checkout img {
+    height: 120px;
+    display: block;
+    padding: 10px;
+    }
+
+    table {
+    margin-right: 5px;
+    }
+
+    #checkout tr td {
+    height: 80px;
+    width: 30%;
+    border-bottom: 2px solid lightgray;
+    margin-left: 5px;
+    }
+
+    #notify {
+    position: fixed;
+    background-color: black;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1000ms, visibility 1000ms;
+    }
+
+    .visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+    }
+
+    .checkout-buttons{
+    background-color: darkgrey;
+    color: white;
+    border: none;
+    padding: 7px;
+    transition-duration: 0.2s;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 2px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    }
+
+    /* --------------------VARUKORG - UNDERRUBRIKERNA---------------- */
+
+    .container1-products {
+    max-width: 100%;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+
+    .product-header1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+    }
+
+    .produktnamn {
+    width: 20%;
+    }
+
+    .produktnummer {
+    width: 35%;
+    }
+
+    .produktnamn1 {
+    width: 20%;
+    }
+
+    .total {
+    margin-left: 10%;
+    }
+
+    .pris {
+    margin-left: 1%;
+    }
+
+    /* --------------------FOOTER-------------------- */
+      
+    form.example1 input[type=text] {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #161616;
+    float: left;
+    width: 70%;
+    background: #161616;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    }
+      
+    form.example1 button {
+    width: 20%;
+    padding: 10px;
+    background: #161616;
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 15px;
+    border: 1px solid #161616;
+    border-left: none;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    }
+      
+    a {
+    color: rgb(168, 168, 168);
+    text-decoration: none;
+    }
+
+    .container{
+	max-width: 1170px;
+	margin: auto;
+    }
+
+    .row1{
+	display: flex;
+	flex-wrap: wrap;
+    }
+
+    ul{
+	list-style: none;
+    }
+
+    h5 {
+    color: rgb(168, 168, 168);
+    }
+
+    .footer {
+	background-color: black;
+    padding: 40px;
+    }
+
+    .footer-col{
+    width: 25%;
+    }
+
+    .footer-col h4{
+	font-size: 18px;
+	color: white;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+    }
+
+    /*responsive*/
+    @media(max-width: 767px){
+    .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    }
+    }
+
+    @media(max-width: 574px){
+    .footer-col{
+    width: 100%;
+    }
+    }
+
+
+    /* -------------ASIDE------------*/
+
+    aside {
+    position: absolute;
+    right: 10%;
+    top: 134%;
+    }
+
+    @media screen and (max-width: 900px) {
+        aside {
+            display: none;
+        }
+    }

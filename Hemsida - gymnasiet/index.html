@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="se">
+    <head>
+    <title>LOGO - Webbshop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+  <div class="innehall">
+      <div class="container-img">
+        <img src="bilder/LOGO.png">
+      </div>
+      
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Hem</a>
+        <a href="omoss.html">Om oss</a>
+        <a href="varukorg.html">
+        <div class="items-in-basket"></div>
+        <i class="fa fa-shopping-cart" style="font-size:20px"></i>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">FRI FRAKT OCH RETUR</div>
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">LADDA NER LOGO APPEN</div>
+        </div>
+      </div>
+
+      <img src="bilder/reklambild.png" alt="forsta">
+
+      <h2>Missa inte våra senaste släpp! Bra priser, bra kvalité och expressleverans året ut!</h2>
+      <div class="product-container">
+        <div><img src="bilder/hoodie.jpg"><button onclick="addToBasket(this, '1','LOGO Hoodie', 450, 'bilder/hoodie.jpg')" id="1"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen </i></button><br>"LOGO" Hoodie <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>450 kr</div>
+        <div><img src="bilder/tshirt.jpg"><button onclick="addToBasket(this, '2','LOGO T-shirt', 250, 'bilder/tshirt.jpg')" id="2"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" T-shirt <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>250 kr</div>
+        <div><img src="bilder/troja.jpg"><button onclick="addToBasket(this, '3','LOGO Sweatshirt', 300, 'bilder/troja.jpg')"id="3"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" Sweatshirt <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>300 kr</div>
+      </div>
+
+          <div class="product-container">
+            <div><img src="bilder/ansiktsmask.jpg"><button onclick="addToBasket(this, '4','LOGO Ansiktsmask', 100, 'bilder/ansiktsmask.jpg')" id="4"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" Ansiktsmask <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>100 kr</div>
+            <div><img src="bilder/gymnastikpase.jpg"><button onclick="addToBasket(this, '5','LOGO Gympapåse', 100, 'bilder/gymnastikpase.jpg')" id="5"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" Gympapåse <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>100 kr</div>
+          </div>
+
+          <img src="bilder/reklambild.png" alt="forsta">
+
+          <div class="product-container">
+            <div><img src="bilder/mobilskal.jpg"><button onclick="addToBasket(this, '6','LOGO Mobilskal', 75, 'bilder/mobilskal.jpg')" id="6"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" Mobilskal <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>75 kr</div>
+            <div><img src="bilder/mugg.jpg"><button onclick="addToBasket(this, '7','LOGO Mugg', 75, 'bilder/mugg.jpg')" id="7"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" Mugg <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>75 kr</div>
+          </div>
+
+          <div class="product-container">
+          <div><img src="bilder/musmatta.jpg"><button onclick="addToBasket(this, '8','LOGO Musmatta', 100, 'bilder/musmatta.jpg')" id="8"><i class="fa fa-shopping-cart" style="font-size:20px"> Lägg i varukorgen</i></button><br>"LOGO" Musmatta <input type="number" id="quantity" name="quantity" min="1" max="15" value="1"><br>100 kr</div>
+          </div>
+        <div>
+        </div>
+        </div>
+
+        <aside>
+          <img src="bilder/aside.png">
+        </aside>
+        
+        <div id="notify"></div>
+
+        <footer class="footer">
+          <div class="container">
+
+            <div class="row1">
+              <div class="footer-col">
+                <img src="bilder/LOGO.png">
+              </div>
+
+              <div class="footer-col">
+                <h4>Varför just LOGO?</h4>
+                <h5>Lorem Ipsum is simply dummy text of the 
+                  printing and typesetting industry. Lorem Ipsum has been the industry's 
+                  standard dummy text ever since the 1500s.</h5>
+              </div>
+
+              <div class="footer-col">
+                <h4>Kontakta oss</h4>
+                  <h5>Simon Khalaf</h5> 
+                  <i class="fa fa-phone"><a href="tel:1-562-867-5309"> 94523452</i></a><br>
+                  <i class="fa fa-envelope-o"><a href="mailto:someone@yoursite.com"> logo@contact.com</i></a><br>
+                  <i class="fa fa-external-link"><a href="logo.se"> logo.se</a></i>
+              </div>
+
+              <div class="footer-col">
+                <h4>Sök</h4>
+                <form class="example1">
+                  <input type="text" placeholder="Sök ..." name="search">
+                  <button type="submit">Sök</button>
+                  </form>      
+              </div>
+            </div>
+          </div>
+       </footer>
+
+      <script src="webshop.js"></script>
+      <script>
+      function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+      x.className += " responsive";
+      } 
+      else {
+      x.className = "topnav";
+  }
+}
+      </script>
+
+</body>
+</html>
